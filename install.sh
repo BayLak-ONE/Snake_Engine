@@ -1,0 +1,3 @@
+echo Installing ...
+sudo update-alternatives --install /usr/bin/snake snake $(pwd)/main 1
+snake
