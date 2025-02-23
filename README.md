@@ -8,6 +8,8 @@ This tool quickly scans Socks4 and Socks5 proxies.
 - Extracted Socks proxies are saved in: `conf/list_socks.txt`.
 - A website is provided to use the extracted proxies. It supports multiple proxies at once.
 - Includes a **DDoS attack** feature using Socks, but it is **very weak** and **not recommended** for malicious purposes. Use it only for **testing and educational purposes**.
+- **Automatically loads Socks proxies** from URLs that provide proxy lists in plain text format.
+- **Proxy source links are stored in:** `conf/links.txt`.
 
 ## Usage
 
