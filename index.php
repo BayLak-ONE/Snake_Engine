@@ -56,9 +56,7 @@
     </style>
 <script>
     function redirectToProxy(ipPortProtocol) {
-        // توليد الرابط بدون استخدام encodeURIComponent
         const url = `/proxy.php?ip=${ipPortProtocol}`;
-        // الانتقال إلى الرابط
          window.open(url, '_blank');
     }
 </script>
@@ -68,21 +66,14 @@
 <body>
     <div class="container">
         <?php
-        // تحديد مسار الملف
         $file = 'conf/list_socks.txt';
-
-        // التحقق من وجود الملف
         if (file_exists($file)) {
-            // قراءة محتويات الملف
             $contents = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
-            // عرض المحتويات
             echo "<h2>Socks 4/5 By Snake Engine</h2>";
             echo "<table>";
             echo "<thead><tr><th>IP:PORT</th><th>Protcol</th></tr></thead>";
             echo "<tbody>";
             foreach ($contents as $line) {
-                // تقسيم السطر إلى عنوان IP ونوع البروتوكول
                 [$ip_port, $protocol] = explode(' - ', $line);
                 $fullProxy = $ip_port . '-' . $protocol;
                 echo "<tr onclick=\"redirectToProxy('$fullProxy')\">";

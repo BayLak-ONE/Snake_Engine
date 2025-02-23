@@ -132,15 +132,10 @@
 
     <script>
         function submitForm() {
-            // Get form values
             const ip = document.getElementById('ip').value;
             const port = document.getElementById('port').value;
             const proxyType = document.querySelector('input[name="proxy_type"]:checked').value;
-
-            // Construct the URL with the parameters
             const url = `/proxy.php?ip=${ip}:${port}-${proxyType}`;
-
-            // Redirect the user to the constructed URL
             window.location.href = url;
         }
     </script>
